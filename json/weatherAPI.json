@@ -1,5 +1,7 @@
 {"cod":"200","calctime":0.006,"cnt":15,"list": [
-  {"id":2208791,"name":"Yafran",
+  {
+    "id":2208791,
+    "name":"Yafran",
     "coord":{
       "lon":12.52859,
       "lat":32.06329

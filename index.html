@@ -3,16 +3,47 @@
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
-
+    <link rel="stylesheet" href="./css/style.css"/>
     <!--Angular Material-->
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-material/angular-material.js"></script>
 
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/AppCtrl.js"></script>
 
 </head>
 <body ng-app="myApp">
-<div ng-view=""></div>
+<div ng-controller="AppCtrl" class="col-md-12">
+
+
+    <div layout="column" class="col-md-6 col-md-offset-3">
+        <md-input-container >
+            <label>Search:</label>
+            <input ng-model="key">
+        </md-input-container>
+        <md-select placeholder="Order" ng-model="order">
+            <md-option value="name">Alphabetical</md-option>
+            <md-option value="main.temp">Increasing Temperature</md-option>
+        </md-select>
+    </div>
+    <ul>
+        <li ng-repeat="weathers in weatherList.list | filter:key | orderBy:order">
+            <div class="col-md-6 weatherContainer" >
+
+                <md-toolbar class="md-accent">
+                    <div class="md-toolbar-tools">
+                        <h2 class="flex">{{weathers.name}}</h2>
+                    </div>
+                </md-toolbar>
+                <h4>Temperature : {{weathers.main.temp}}</h4>
+                <img ng-src="http://openweathermap.org/img/w/{{weathers.weather[0].icon}}.png" alt=""/>
+            </div>
+        </li>
+    </ul>
+</div>
 </body>
 </html>

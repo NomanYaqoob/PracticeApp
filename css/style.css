@@ -1,0 +1,19 @@
+.weatherContainer{
+    background: #405797 !important;
+    color: #faf3ff;
+    border-radius: 3px;
+    margin: 3px;
+    border: 1px solid #000000;
+    padding: 0px !important;
+    font-family: Calibri,Cambria,sans-serif;
+
+}
+
+ul,li {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.searchBox {
+
+}
