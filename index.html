@@ -18,7 +18,11 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="AppCtrl" class="col-md-12">
-
+    <md-toolbar class="md-warn md-hue-3">
+        <div class="md-toolbar-tools">
+            <h2 class="flex">Weather In Touch</h2>
+        </div>
+    </md-toolbar>
 
     <div layout="column" class="col-md-6 col-md-offset-3">
         <md-input-container >
@@ -30,20 +34,19 @@
             <md-option value="main.temp">Increasing Temperature</md-option>
         </md-select>
     </div>
-    <ul>
-        <li ng-repeat="weathers in weatherList.list | filter:key | orderBy:order">
-            <div class="col-md-6 weatherContainer" >
-
-                <md-toolbar class="md-accent">
-                    <div class="md-toolbar-tools">
-                        <h2 class="flex">{{weathers.name}}</h2>
-                    </div>
-                </md-toolbar>
-                <h4>Temperature : {{weathers.main.temp}}</h4>
-                <img ng-src="http://openweathermap.org/img/w/{{weathers.weather[0].icon}}.png" alt=""/>
-            </div>
-        </li>
-    </ul>
-</div>
+        <ul>
+            <li ng-repeat="weathers in weatherList.list | filter:key | orderBy:order">
+                <div class="col-md-4  col-md-offset-1 weatherContainer" >
+                    <md-toolbar class="md-accent radius">
+                        <div class="md-toolbar-tools ">
+                            <h2 class="flex radius">{{weathers.name}}</h2>
+                        </div>
+                    </md-toolbar>
+                    <h4>Temperature : {{weathers.main.temp}}</h4>
+                    <img ng-src="http://openweathermap.org/img/w/{{weathers.weather[0].icon}}.png" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
