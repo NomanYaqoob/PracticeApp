@@ -1,0 +1,19 @@
+{
+  "name": "PracticeApp",
+  "version": "0.0.0",
+  "authors": [
+    "NomanYaqoob <noman.mukhi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.9.0",
+    "bootstrap": "~3.3.4"
+  }
+}
