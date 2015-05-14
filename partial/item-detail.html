@@ -1,10 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div>
 
-</body>
-</html>
+    <md-toolbar class="md-warn">
+        <div class="md-toolbar-tools">
+            <h2 class="flex">Weather In Touch</h2>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding style="height: 600px;padding: 24px;">
+        <table class=" table">
+            <tr class="">
+                <td><strong>Country:</strong></td>
+                <td><strong>{{weatherDetail.name}}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Temperature:</strong></td>
+                <td>{{weatherDetail.main.temp}} <img class="img" ng-src="http://openweathermap.org/img/w/{{weatherDetail.weather[0].icon}}.png" alt=""/></td>
+            </tr>
+            <tr>
+                <td><strong>Min Temp:</strong></td>
+                <td>{{weatherDetail.main.temp_min}}</td>
+                <td><strong>Max Temp:</strong></td>
+                <td>{{weatherDetail.main.temp_max}}</td>
+            </tr>
+            <tr>
+                <td><strong>Wind Speed:</strong></td>
+                <td>{{weatherDetail.wind.speed}}</td>
+            </tr>
+            <tr>
+                <td><strong>Wind Degree:</strong></td>
+                <td>{{weatherDetail.wind.deg}}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Coordinates:</strong></td>
+                <td>
+                    <ul>
+                        <li><strong>Longitude: </strong> {{weatherDetail.coord.lon}}</li>
+                        <li><strong>Latitude: </strong> {{weatherDetail.coord.lat}}</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Weather:</strong></td>
+                <td>{{weatherDetail.weather[0].main}}</td>
+            </tr>
+            <tr>
+                <td><strong>Description:</strong></td>
+                <td>{{weatherDetail.weather[0].description}}</td>
+            </tr>
+
+        </table>
+    </md-content>
+</div>

@@ -1,0 +1,25 @@
+{"id":2208425,
+  "name":"Zuwarah",
+  "coord":{"lon":12.08199,
+    "lat":32.931198},
+  "main":{"temp":24.78,
+    "temp_min":24.778,
+    "temp_max":24.778,
+    "pressure":1015.43,
+    "sea_level":1027.26,
+    "grnd_level":1015.43,
+    "humidity":38},
+  "dt":1430805631,
+  "wind":{
+    "speed":0.76,
+    "deg":149.5
+  },
+  "clouds":{
+    "all":0
+  },
+  "weather":[{"id":800,
+    "main":"Clear",
+    "description":"Sky is Clear",
+    "icon":"01d"
+  }]
+}

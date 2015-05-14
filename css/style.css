@@ -24,3 +24,11 @@ ul,li {
 .searchBox {
 
 }
+.img{
+    margin:-13px 0px 0px 0px;
+}
+
+
+.link:hover{
+    color: white;
+}
